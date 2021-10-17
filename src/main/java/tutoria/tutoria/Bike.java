@@ -34,7 +34,7 @@ public class Bike implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "categoryId")
-    @JsonIgnoreProperties("bike")
+    @JsonIgnoreProperties("bikes")
     private Categoria category;
 
      @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "bike")
@@ -108,7 +108,8 @@ public class Bike implements Serializable{
     public void setReservations(List<Reservacion> reservations) {
         this.reservations = reservations;
     }
-    
+
+  
     
    
 
